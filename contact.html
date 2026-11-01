@@ -8,31 +8,46 @@
 
 </head>
 
+
+<body>
+<div class ="wrapper">
+<img src ="logo.jpg" alt="logo" width="70" height="80">
+
+<ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
+
+
 <body>
 <div class ="wrapper">
 
-<div class ="content">
-<b><h3>Contact Form:</h3></b>
-<b> <p> Contact us below:</p></b>
+<div class ="contactheader">
+        <b><h3>Contact Form</h3></b>
+        <b> <p> The required fields are labelled with an asterisk:</p></b>
+ 
+    </div>
 
-<div class ="column">
-    <form action ="/action_page.php" target="_blank" method="get">
-        <label for ="fname">Full Name:</label>
-        <input type="text" id="fname" name="fullname" required <br>
-placeholder ="Your Name">
-        <label for ="email">Type your email:</label>
-        <input type="email" id="email" name="email" required
-placeholder ="Your email">
-        <label for ="message">Message</label><br>
-        <textarea id = "message" name ="subject" required style ="width:600px; height:300px;"></textarea
-placeholder ="Your message";>
-            <input type = "submit" value="Submit"><br>
-    </form>
+<div class ="container">
+        <form action ="#"/action_page.php" target ="_blank" method="post"
+                onsubmit="return validateForm()"method="post">
+                <label for ="fname">Full Name:*</label><br>
+                 <input type="text" id="fname" name="fullname" required <br>
+                 <label for ="email">Type your email:*</label><br>
+                 <input type="email" id="email" name="email" required>
+                 <label for ="message">Message:*</label><br>
+                 <textarea id = "message" name ="subject" required style ="width:400px; height:260px;"></textarea>
+                <input type = "submit" value="Submit"><br>
+</form>
 
-<button onclick ="alert('Are you sure, you want to leave this page')">Alert</button>
-<button type ="button" onclick ="document.getElementById('demo').innerHTML=Date()">Click here to display date and time</button>
-
+<div class ="footer">
+        <p>2026 The Power BI Hub. All rights reserved.</p>
+</footer>
 
 </div>
 </body>  
 </html>
+
+
+
+
