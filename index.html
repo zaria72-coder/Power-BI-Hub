@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang ="eng">
 <head>
-<meta name ="viewport" content="width=device-width, initial-scale="1.0>
+<meta name ="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href="styles.css">
 <title>The Power BI Hub</Title>
-<img align = "left" 
-src ="logo.jpg" alt=" logo" width:"50" height="105"
+
 
 </head>
 
@@ -13,13 +12,14 @@ src ="logo.jpg" alt=" logo" width:"50" height="105"
 <style>
 *{
     box-sizing: border-box;
+}
 ul{
     list-style-type:none;
     margin:0;
     padding:0;
     overflow:hidden;
     background-color:#0f6dc5;
-    position:absolute;
+    position:relative;
     top:0;
     width:100%;
 
@@ -47,7 +47,6 @@ ul li a.active{
 }
 
 body{
-  
     font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
     margin:0;
@@ -58,14 +57,14 @@ body{
 /*styling the header*/
 
 .gridcontainer{
-    display:grid;
+    display:block;
     grid-template-areas:
     'header'
     'menu'
     'content'
     'usage'
     'footer';
-    background-color:rgb(206, 214, 209);
+    background-color:rgb(246, 255, 249);
     gap:15px;
 }
 
@@ -121,7 +120,7 @@ font-size: 35px;
 .usage{
     grid-area: usage;
     border:1px solid rgb(63, 155, 151);
-    background-color: antiquewhite;
+    background-color: rgb(255, 251, 247);
     padding:10px;
 
 }
@@ -153,6 +152,7 @@ font-size: 35px;
 </style>
 
 <body>
+<img src ="logo.jpg" alt="logo" width="70" height="80">
 
 <ul>
     <li><a href="#home">Home</a></li>
@@ -162,7 +162,7 @@ font-size: 35px;
 
 <div class="gridcontainer">
 <div class="header"><h1>The Power BI Hub</h1></div>
-<img src = "dashboard.jpg" alt = "Power BI information" width: "200" height:"300">
+<img src = "dashboard.jpg" alt = "Power BI information" width= "300" height="200">
 
 
 </div>
@@ -194,9 +194,31 @@ font-size: 35px;
 <p><a href = "https://www.sqlbi.com/training/dax/">Learn more on Dax from SQLbi</a></p>
 
 <div class = "content">
-<h3>Open Library Books</h3>
+<h3>Open Library <Search></h3>
+
+<script>
+
+async function loaddata() {
+    let response = await fetch("https://openlibrary.org/search.json?q=powerbi");
+
+    const data = await response.json();
+    let len = data.docs.length;
+
+    let text ="";
+    for (let i = 0; i<len; i++) {
+        text+= data.docs[i].title + "<br>";
+    }
+    document.getElementById("demo").innerHTML =text;
+}
+
+loaddata();
+
+
+</script>
 
 <p id ="demo"></p>
+
+
 
 <div class ="topnav">
     <input type="text" placeholder ="Search">
@@ -207,13 +229,13 @@ font-size: 35px;
 <b> <p> Contact us below:</p></b>
 
 <div class ="column">
-    <form action ="/action_page.php" target=""_blank" method="get">
+    <form action ="/action_page.php" target="_blank" method="get">
         <label for ="fname">Full Name:</label>
-        <input type="text" id="fname" name="fullname" value="">
+        <input type="text" id="fname" name="fullname" required>
         <label for ="email">Type your email:</label>
-        <input type="email" id="email" name="email"><br>
+        <input type="email" id="email" name="email" required><br>
         <label for ="message">Message</label><br>
-        <textarea id = "Message:" name ="subject" style ="width:600px; height:300px;"></textarea><br>
+        <textarea id = "message" name ="subject" required style ="width:600px; height:300px;"></textarea><br>
             <input type = "submit" value="Submit"><br>
     </form>
 
