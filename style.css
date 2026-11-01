@@ -53,7 +53,7 @@ body{
     'content'
     'usage'
     'footer';
-    background-color:rgb(246, 255, 249);
+    background-color:white;
     gap:15px;
 }
 
@@ -93,6 +93,7 @@ font-size: 35px;
     background-color: white;
 }
 
+/*content style*/
 .content{
     grid-area:main;
 }
@@ -105,6 +106,7 @@ font-size: 35px;
 .content >p {
     margin-bottom:7px;
 }
+/*Usage styling*/
 
 .usage{
     grid-area: usage;
@@ -122,10 +124,10 @@ font-size: 35px;
 .usage li{
     margin-bottom:5px;
 }
-
+/*footer styling*/
 .footer{
     grid-area:footer;
-    background-color: antiquewhite;
+    background-color: white;
     text-align:center;
 }
 
@@ -138,3 +140,36 @@ font-size: 35px;
     .usage {grid-area: 2 /span 1;}
     .footer{grid-area: 3 /span 6;}
 }
+
+/* Contact Page styling*/
+input[type=text], select, textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid white;
+    border: radius 4px;;
+    box-sizing:border-box;
+    margin-top:6px;
+    margin-bottom:16px;
+    resize:vertical
+}
+
+input[type=submit] {
+    background-color: lightgrey;
+    color:white;
+    padding: 12px 20px;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+
+}
+
+input[type=submit]:hover{
+    background-color:lightgrey;
+
+}
+.container{
+    border-radius: 5px;
+    background-color:white;
+    padding:20px;
+}
+
