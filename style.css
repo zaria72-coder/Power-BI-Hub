@@ -1,0 +1,140 @@
+style>
+*{
+    box-sizing: border-box;
+}
+ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background-color:#0f6dc5;
+    position:relative;
+    top:0;
+    width:100%;
+
+}
+
+ul li {
+    float: left;
+}
+
+ul li a {
+    display:block;
+    color:white;
+    text-align:center;
+    padding: 5px 10px;
+    text-decoration:none;
+
+
+}
+
+ul li a:hover:not(.active) {
+    background-color: rgb(154, 241, 237);
+}
+ul li a.active{
+    background-color: antiquewhite;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    margin:0;
+    padding:0;
+
+
+}
+/*styling the header*/
+
+.gridcontainer{
+    display:block;
+    grid-template-areas:
+    'header'
+    'menu'
+    'content'
+    'usage'
+    'footer';
+    background-color:rgb(246, 255, 249);
+    gap:15px;
+}
+
+.header{
+    grid-area: header;
+    background-color: rgb(12, 90, 145);
+    padding:15px;
+    text-align:center;
+    font-size: 24px;
+    color:white;
+
+}
+
+.header> h1{
+font-size: 35px;
+}
+
+.menu{
+    grid-area: menu;
+}
+
+.menu ul{
+    list-style-type:none;
+    margin:0;
+    padding:0
+
+}
+
+.menu li{
+    padding:10px;
+    margin-bottom: 8px;
+    background-color: white;
+    color:black;
+}
+
+.menu li:hover{
+    background-color: white;
+}
+
+.content{
+    grid-area:main;
+}
+
+.content>h1{
+    font-size: 24px;
+    margin-bottom:8px;
+}
+
+.content >p {
+    margin-bottom:7px;
+}
+
+.usage{
+    grid-area: usage;
+    border:1px solid rgb(63, 155, 151);
+    background-color: rgb(255, 251, 247);
+    padding:10px;
+
+}
+
+.usage>h2{
+    font-size:24px;
+}
+
+
+.usage li{
+    margin-bottom:5px;
+}
+
+.footer{
+    grid-area:footer;
+    background-color: antiquewhite;
+    text-align:center;
+}
+
+
+@media (min-width:600px){
+    .header{grid-area: 1 /span 6;}
+    .menu {grid-area:  2 /span 6;}
+    .content{grid-area:2 /span 4;}
+    .content{grid-area:2 /span 1;}
+    .usage {grid-area: 2 /span 1;}
+    .footer{grid-area: 3 /span 6;}
+}
