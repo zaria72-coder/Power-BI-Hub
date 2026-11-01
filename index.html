@@ -2,13 +2,14 @@
 <html lang ="en">
 <head>
 <meta name ="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href="styles.css">
+    <link rel = "stylesheet" href="style.css">
 <title>The Power BI Hub</Title>
 
 
 </head>
 
 <body>
+<div class ="wrapper">
 <img src ="logo.jpg" alt="logo" width="70" height="80">
 
 <ul>
@@ -18,8 +19,9 @@
 </ul>
 
 <div class="gridcontainer">
-<div class="header"><h1>The Power BI Hub</h1></div>
-<img src = "dashboard.jpg" alt = "Power BI information" width= "300" height="200">
+    <div class="header"><h1>The Power BI Hub</h1></div>
+<img src = "dashboard.jpg" alt = "Power BI information" width= 850" height="600">
+
 
 
 </div>
@@ -31,8 +33,8 @@
 </div>
 
 <div class = "usage">
-    <h3> Dax</h3>
-    <p> Dax Analysis Expression is a library of functions and operations to develop measures and calculated columns in Power BI</p>
+    <h3> DAX</h3>
+    <p> DAX is a Data Analysis Expression, consisting a library of functions and operations to develop measures and calculated columns in Power BI</p>
 </div>
 
 <div class ="usage">
@@ -81,23 +83,6 @@ loaddata();
     <input type="text" placeholder ="Search">
     </div>
 
-<div class ="content">
-<b><h3>Contact Form:</h3></b>
-<b> <p> Contact us below:</p></b>
-
-<div class ="column">
-    <form action ="/action_page.php" target="_blank" method="get">
-        <label for ="fname">Full Name:</label>
-        <input type="text" id="fname" name="fullname" required>
-        <label for ="email">Type your email:</label>
-        <input type="email" id="email" name="email" required><br>
-        <label for ="message">Message</label><br>
-        <textarea id = "message" name ="subject" required style ="width:600px; height:300px;"></textarea><br>
-            <input type = "submit" value="Submit"><br>
-    </form>
-
-<button onclick ="alert('Are you sure, you want to leave this page')">Alert</button>
-<button type ="button" onclick ="document.getElementById('demo').innerHTML=Date()">Click here to display date and time</button>
 
 </div>
 </body>  
