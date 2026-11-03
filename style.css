@@ -133,7 +133,7 @@ font-size: 35px;
 }
 
 
-@media (min-width:600px){
+@media (min-width:500px){
     .header{grid-area: 1 /span 6;}
     .menu {grid-area:  2 /span 6;}
     .content{grid-area:2 /span 4;}
